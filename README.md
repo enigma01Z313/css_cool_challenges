@@ -16,10 +16,22 @@ E.g. Number 1: the selector is #card1, so there is file ./scss/card1.css and you
 ![semi-cicle-on-border](./readmeImg/semi-cicle.png)
 
 ### Parameters:
-
 --wrapper-background: 3, background color of box wrapper, #fff <br/>
---box-background: 11, background color of box, aqua <br/>
---box-border-color: 12, color of border, blue <br/>
---box-border-width: 13, width of the box border, 2px <br/>
---radius-to-border-scale: 14, scale wich changes semi-cicle size based on border width, the bigger it is the cicle will be bigger in comparasion to the border with, 5 <br/>
---semi-circle-radius: 15, it's just the multiplication of --box-border-width and --radius-to-border-scale, 10px
+--box-background: 4, background color of box, aqua <br/>
+--box-border-color: 5, color of border, blue <br/>
+--box-border-width: 6, width of the box border, 2px <br/>
+--scale-radius-to-border: 7, scale which changes semi-cicle size based on border width, the bigger it is the cicle will be bigger in comparasion to the border with, 5 <br/>
+--scale-cicle-radius-to-box-radius: 8, scale which changes box border-radius according to semi-cicle-radius(1 for same size), 1
+--semi-circle-radius: 9, it's just the multiplication of --box-border-width and --radius-to-border-scale, 10px
+--semi-circle-radius: 9, it's just the multiplication of --scale-cicle-radius-to-box-radius and --semi-circle-radius, 5px
+
+<hr />
+
+## 2- wavy colored text
+
+### Selector: #wave1
+
+### Parameters:
+--color-1: 2, background and text color 1, #000 <br/>
+--color-1: 3, text stroke and text color 2, blue <br/>
+--wave-speed: 4, time it takes wave one full cicle, 3s <br/>
