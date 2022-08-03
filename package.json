@@ -1,0 +1,23 @@
+{
+  "name": "html_css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/_main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enigma01Z313/html_css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enigma01Z313/html_css/issues"
+  },
+  "homepage": "https://github.com/enigma01Z313/html_css#readme",
+  "dependencies": {
+    "sass": "^1.54.1"
+  }
+}

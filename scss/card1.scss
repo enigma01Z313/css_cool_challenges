@@ -1,0 +1,58 @@
+#card1{
+  //setup
+  --wrapper-background: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  background-color: var(--wrapper-background);
+
+  //main-style
+  .card{
+    --box-background: aqua;
+    --box-border-color: blue;
+    --box-border-width: 2px;
+    --radius-to-border-scale: 5;
+    --semi-circle-radius: calc(var(--radius-to-border-scale) * var(--box-border-width));
+
+    display: block;
+    width: 200px;
+    height: 100px;
+    background-color: var(--box-background);
+    position: relative;
+    border: var(--box-border-width) solid var(--box-border-color);
+    border-radius: var(--semi-circle-radius);
+
+    &:before, &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: var(--semi-circle-radius);
+      height: calc(2 * var(--semi-circle-radius));
+      background-color: var(--wrapper-background);
+      border-width: 0;
+      border-style: solid;
+      border-color: var(--box-border-color);
+      border-top-width: var(--box-border-width);
+      border-bottom-width: var(--box-border-width);
+      box-sizing: border-box;
+
+      --positionning: calc(-1 * var(--box-border-width));
+    }
+
+    &:before{
+      left: var(--positionning);
+      border-right-width: var(--box-border-width);
+      border-top-right-radius: var(--semi-circle-radius);
+      border-bottom-right-radius: var(--semi-circle-radius);
+    }
+
+    &:after{
+      right: var(--positionning);
+      border-left-width: var(--box-border-width);
+      border-top-left-radius: var(--semi-circle-radius);
+      border-bottom-left-radius: var(--semi-circle-radius);
+    }
+  }
+}
