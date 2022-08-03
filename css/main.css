@@ -6,24 +6,26 @@
 
 #card1 {
   --wrapper-background: #fff;
+  --box-background: aqua;
+  --box-border-color: green;
+  --box-border-width: 2px;
+  --scale-radius-to-border: 5;
+  --scale-cicle-radius-to-box-radius: 1;
+  --semi-circle-radius: calc(var(--scale-radius-to-border) * var(--box-border-width));
+  --box-radius: calc(var(--scale-cicle-radius-to-box-radius) * var(--semi-circle-radius));
   display: flex;
   justify-content: center;
   padding: 30px 0;
   background-color: var(--wrapper-background);
 }
 #card1 .card {
-  --box-background: aqua;
-  --box-border-color: blue;
-  --box-border-width: 2px;
-  --radius-to-border-scale: 5;
-  --semi-circle-radius: calc(var(--radius-to-border-scale) * var(--box-border-width));
   display: block;
   width: 200px;
   height: 100px;
   background-color: var(--box-background);
   position: relative;
   border: var(--box-border-width) solid var(--box-border-color);
-  border-radius: var(--semi-circle-radius);
+  border-radius: var(--box-radius);
 }
 #card1 .card:before, #card1 .card:after {
   content: "";
@@ -53,6 +55,39 @@
   border-left-width: var(--box-border-width);
   border-top-left-radius: var(--semi-circle-radius);
   border-bottom-left-radius: var(--semi-circle-radius);
+}
+
+#wave1 {
+  --color-1: #000;
+  --color-2: blue;
+  --wave-speed: 3s;
+  ---bg-part-step: 3;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  background: var(--color-1);
+}
+@keyframes move {
+  to {
+    background-position: -200% 0, -100% 0, 0 0, 100% 0;
+  }
+}
+#wave1 .wave {
+  background: radial-gradient(100% 58.1% at top, var(--color-1) 99%, var(--color-2)) 0, radial-gradient(100% 58.1% at bottom, var(--color-2) 99%, var(--color-1)) 100%, radial-gradient(100% 58.1% at top, var(--color-1) 99%, var(--color-2)) 200%, radial-gradient(100% 58.1% at bottom, var(--color-2) 99%, var(--color-1)) 300%;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  animation: move var(--wave-speed) infinite linear;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-family: tahoma;
+  text-stroke: 1px var(--color-2);
+  -webkit-text-stroke: 1px var(--color-2);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 /*# sourceMappingURL=main.css.map */

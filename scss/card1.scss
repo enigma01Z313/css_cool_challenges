@@ -1,6 +1,14 @@
 #card1{
   //setup
   --wrapper-background: #fff;
+  --box-background: aqua;
+  --box-border-color: green;
+  --box-border-width: 2px;
+  --scale-radius-to-border: 5;
+  --scale-cicle-radius-to-box-radius: 1;
+  --semi-circle-radius: calc(var(--scale-radius-to-border) * var(--box-border-width));
+  --box-radius: calc(var(--scale-cicle-radius-to-box-radius) * var(--semi-circle-radius));
+
   display: flex;
   justify-content: center;
   padding: 30px 0;
@@ -8,19 +16,13 @@
 
   //main-style
   .card{
-    --box-background: aqua;
-    --box-border-color: blue;
-    --box-border-width: 2px;
-    --radius-to-border-scale: 5;
-    --semi-circle-radius: calc(var(--radius-to-border-scale) * var(--box-border-width));
-
     display: block;
     width: 200px;
     height: 100px;
     background-color: var(--box-background);
     position: relative;
     border: var(--box-border-width) solid var(--box-border-color);
-    border-radius: var(--semi-circle-radius);
+    border-radius: var(--box-radius);
 
     &:before, &:after{
       content: "";
