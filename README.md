@@ -17,9 +17,9 @@ E.g. Number 1: the selector is #card1, so there is file ./scss/card1.css and you
 
 ### Parameters:
 
---wrapper-background: 3, background color of box wrapper, #fff
---box-background: 11, background color of box, aqua
---box-border-color: 12, color of bod, blue
---box-border-width: 13, width of the box border, 2px
---radius-to-border-scale: 14, scale wich changes semi-cicle size based on border width, the bigger it is the cicle will be bigger in comparasion to the border with, 5
+--wrapper-background: 3, background color of box wrapper, #fff <br/>
+--box-background: 11, background color of box, aqua <br/>
+--box-border-color: 12, color of border, blue <br/>
+--box-border-width: 13, width of the box border, 2px <br/>
+--radius-to-border-scale: 14, scale wich changes semi-cicle size based on border width, the bigger it is the cicle will be bigger in comparasion to the border with, 5 <br/>
 --semi-circle-radius: 15, it's just the multiplication of --box-border-width and --radius-to-border-scale, 10px
