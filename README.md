@@ -4,7 +4,7 @@
 
 **Parameters:** first shows line of variable definition, second id explanation of each section, third is it's current value
 
-**Files location:** there is a scss file on scss folder for each selector mentioned on readme file
+**Files location:** there is a scss file on scss folder for each selector mentioned on readme file <br/>
 E.g. Number 1: the selector is #card1, so there is file ./scss/card1.css and you can see the code
 
 <hr/>
