@@ -1,4 +1,4 @@
-# here goes some fun html sass dynamic calculated designs :D
+# some fun html sass dynamic calculated designs :D
 
 **Selector:** on each section there is a selector section and shows which part of index.html that demo is refering to
 
@@ -16,6 +16,7 @@ E.g. Number 1: the selector is #card1, so there is file ./scss/card1.css and you
 ![semi-cicle-on-border](./readmeImg/semi-cicle.png)
 
 ### Parameters:
+
 --wrapper-background: 3, background color of box wrapper, #fff <br/>
 --box-background: 4, background color of box, aqua <br/>
 --box-border-color: 5, color of border, blue <br/>
@@ -34,10 +35,10 @@ E.g. Number 1: the selector is #card1, so there is file ./scss/card1.css and you
 ![semi-cicle-on-border](./readmeImg/wave.gif)
 
 ### Parameters:
+
 --color-1: 2, background and text color 1, #000 <br/>
 --color-1: 3, text stroke and text color 2, blue <br/>
 --wave-speed: 4, time it takes wave one full cicle, 3s <br/>
-
 
 <hr />
 
@@ -48,6 +49,7 @@ E.g. Number 1: the selector is #card1, so there is file ./scss/card1.css and you
 ![semi-cicle-on-border](./readmeImg/cicular.gif)
 
 ### Parameters:
---section-bg-color: 2, section background color: #222
---box-color: 27, color of button, #ff0
+
+--section-bg-color: 2, section background color: #222 <br/>
+--box-color: 27, color of button, #ff0 <br/>
 --base-time: 28, one fourth of time you want a cicle take, .4s
