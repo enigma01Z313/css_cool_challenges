@@ -46,7 +46,7 @@ E.g. Number 1: the selector is #card1, so there is file ./scss/card1.css and you
 
 ### Selector: #button1
 
-![semi-cicle-on-border](./readmeImg/cicular.gif)
+![semi-cicle-on-border](./readmeImg/cicular2.gif)
 
 ### Parameters:
 
