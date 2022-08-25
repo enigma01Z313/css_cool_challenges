@@ -61,7 +61,6 @@
   --color-1: #000;
   --color-2: blue;
   --wave-speed: 3s;
-  ---bg-part-step: 3;
   display: flex;
   justify-content: center;
   padding: 30px 0;
@@ -88,6 +87,118 @@
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+#button1 {
+  --section-bg-color: #222;
+  display: flex;
+  justify-content: center;
+  padding: 70px 0;
+  background: var(--section-bg-color);
+}
+#button1 a {
+  --box-color: #ff0;
+  --base-time: .4s;
+  --base-time-x4: calc(4 * var(--base-time));
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 20px;
+  color: var(--box-color);
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  transition: all 0.35s;
+}
+#button1 a span::before, #button1 a span::after {
+  --base-pos: -100%;
+  --goto-pos: 300%;
+  --box-w: 100%;
+  --box-h: 2px;
+  content: "";
+  display: block;
+  position: absolute;
+  background: linear-gradient(var(--box-oriantation), transparent, var(--box-color));
+  top: var(--pos-top);
+  right: var(--pos-right);
+  bottom: var(--pos-bottom);
+  left: var(--pos-left);
+  width: var(--box-w);
+  height: var(--box-h);
+}
+#button1 a span:first-child:after,
+#button1 a span:last-child:after {
+  --box-w: 2px;
+  --box-h: 100%;
+}
+#button1 a span:first-child:before {
+  --pos-left: var(--base-pos);
+  --pos-top: 0;
+  --box-oriantation: calc( 1 * 90deg);
+  left: var(--base-pos);
+  animation: doAnimate1 linear var(--base-time-x4) infinite;
+  animation-delay: calc(0 * var(--base-time));
+}
+@keyframes doAnimate1 {
+  0% {
+    left: var(--base-pos);
+  }
+  100% {
+    left: var(--goto-pos);
+  }
+}
+#button1 a span:first-child:after {
+  --pos-top: var(--base-pos);
+  --pos-right: 0;
+  --box-oriantation: calc( 2 * 90deg);
+  top: var(--base-pos);
+  animation: doAnimate2 linear var(--base-time-x4) infinite;
+  animation-delay: calc(1 * var(--base-time));
+}
+@keyframes doAnimate2 {
+  0% {
+    top: var(--base-pos);
+  }
+  100% {
+    top: var(--goto-pos);
+  }
+}
+#button1 a span:last-child:before {
+  --pos-right: var(--base-pos);
+  --pos-bottom: 0;
+  --box-oriantation: calc( 3 * 90deg);
+  right: var(--base-pos);
+  animation: doAnimate3 linear var(--base-time-x4) infinite;
+  animation-delay: calc(2 * var(--base-time));
+}
+@keyframes doAnimate3 {
+  0% {
+    right: var(--base-pos);
+  }
+  100% {
+    right: var(--goto-pos);
+  }
+}
+#button1 a span:last-child:after {
+  --pos-bottom: var(--base-pos);
+  --pos-left: 0;
+  --box-oriantation: calc( 4 * 90deg);
+  bottom: var(--base-pos);
+  animation: doAnimate4 linear var(--base-time-x4) infinite;
+  animation-delay: calc(3 * var(--base-time));
+}
+@keyframes doAnimate4 {
+  0% {
+    bottom: var(--base-pos);
+  }
+  100% {
+    bottom: var(--goto-pos);
+  }
+}
+#button1 a:hover {
+  top: 2px;
+  -webkit-box-reflect: below 0 linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+  background: var(--box-color);
+  color: var(--section-bg-color);
 }
 
 /*# sourceMappingURL=main.css.map */

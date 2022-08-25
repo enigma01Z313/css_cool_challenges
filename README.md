@@ -31,7 +31,23 @@ E.g. Number 1: the selector is #card1, so there is file ./scss/card1.css and you
 
 ### Selector: #wave1
 
+![semi-cicle-on-border](./readmeImg/wave.gif)
+
 ### Parameters:
 --color-1: 2, background and text color 1, #000 <br/>
 --color-1: 3, text stroke and text color 2, blue <br/>
 --wave-speed: 4, time it takes wave one full cicle, 3s <br/>
+
+
+<hr />
+
+## 3- ciculating border on link
+
+### Selector: #button1
+
+![semi-cicle-on-border](./readmeImg/cicular.gif)
+
+### Parameters:
+--section-bg-color: 2, section background color: #222
+--box-color: 27, color of button, #ff0
+--base-time: 28, one fourth of time you want a cicle take, .4s
